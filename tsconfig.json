@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target"											: "es5",
+    "module"                      : "esnext",
+    "jsx"                         : "react",
+    "moduleResolution"            : "node",
+    "strict"                      : false,
+    "importHelpers"               : true,
+    "esModuleInterop"             : true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators"      : true,
+    "downlevelIteration"          : true,
+    "sourceMap"                   : true,
+    "allowJs"                     : true,
+    "baseUrl"                     : ".",
+    "paths": {
+      "@/*": [ "src/*" ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable"
+    ]
+  },
+  "include": [
+    "src",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
