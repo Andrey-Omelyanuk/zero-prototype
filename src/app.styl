@@ -10,24 +10,49 @@ right_sidebar_width_mobile       = 100%
     flex-direction row
 
     &__left-sidebar
-      position absolute
-      top      0
-      left     0
-      z-index  1
-      width: left_sidebar_width_opened
-      height 100%
-      padding-top 0
+        position absolute
+        top      0
+        left     0
+        z-index  1
+        width: left_sidebar_width_opened
+        height 100%
+        padding-top 0
 
     &__left-sidebar-placeholder
-      z-index 1
-      pointer-events none
-      min-width: left_sidebar_width_opened
-      transition min-width .5s cubic-bezier(0.25, .8, .25, 1)
+        z-index 1
+        pointer-events none
+        min-width: left_sidebar_width_opened
+        transition min-width .5s cubic-bezier(0.25, .8, .25, 1)
 
     &.left-sidebar__is-closed
-      .app__left-sidebar-placeholder
-        min-width: left_sidebar_width_closed
+        .app__left-sidebar-placeholder
+            min-width: left_sidebar_width_closed
+            transition min-width .5s cubic-bezier(0.25, .8, .25, 1)
+
+    &__right-sidebar
+        position absolute
+        top 0
+        z-index 2
+        width: right_sidebar_width
+        height 100%
+        background-color #FFFFFF
+        box-shadow -2px 0 3px 0 rgba(0, 0, 0, 0.12)
+        right 0
+        transition right .5s cubic-bezier(0.25, .8, .25, 1)
+
+    &__right-sidebar-placeholder
+        z-index 1
+        pointer-events none
+        min-width : right_sidebar_width
         transition min-width .5s cubic-bezier(0.25, .8, .25, 1)
+
+    &.right-sidebar__is-closed
+        .app__right-sidebar
+            right : - right_sidebar_width
+            transition right     .5s cubic-bezier(0.25, .8, .25, 1)
+        .app__right_placeholder
+            min-width 0
+            transition min-width .5s cubic-bezier(0.25, .8, .25, 1)
 
 .app-content
     flex auto

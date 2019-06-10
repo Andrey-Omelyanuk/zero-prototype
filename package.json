@@ -4,12 +4,16 @@
   "private": true,
   "scripts": {
     "serve": "webpack-dev-server",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+		"test"  : "jest"
   },
   "dependencies": {
     "mobx"                      : "5.9.4",
     "mobx-react"                : "5.4.3",
-    "mobx-orm"                  : "https://github.com/Andrey-Omelyanuk/mobx-orm.git#v0.1.4",
+    "mobx-orm"                  : "https://github.com/Andrey-Omelyanuk/mobx-orm.git#v0.1.5",
+
+    "crypto-js"                 : "3.1.9-1",
+    "jsencrypt"                 : "3.0.0-rc.1",
 
     "react"                     : "16.8.6",
     "react-dom"                 : "16.8.6",
@@ -27,6 +31,9 @@
     "typescript"              : "3.4.3",
     "tslint"                  : "5.15.0",
     "stylus"                  : "0.54.5",
+		"jest"                    : "24.7.1",
+    "ts-jest"                 : "24.0.2",
+		"@types/jest"             : "24.0.11",
 
     "webpack"                     : "4.29.6",
     "webpack-cli"                 : "3.3.0", 
@@ -51,5 +58,14 @@
   "engines": {
     "node": ">= 8.0.0",
     "npm": ">= 5.0.0"
-  }
+  },
+	"jest": {
+		"moduleFileExtensions"	: ["ts", "js", "json"],
+		"moduleDirectories"			: ["node_modules"],
+		"modulePaths"						: ["."],
+		"transform": {
+			"^.+\\.tsx?$": "ts-jest"
+		},
+		"testRegex": "(/src|e2e/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$"
+	}
 }
